@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Wiskunde Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/docent">Docent</a>
+    <a href="/info">Info</a>
+  </nav>
+    <div name="input-form">
+        <h2>Stel een vraag over wiskunde</h2>
+        <form name="aanvraag" method="post">
+            <input name="vraag" size="60" placeholder="Typ hier je vraag...">
+            <input name="submitknop" type="submit" value="Stel vraag">
+        </form>
+    </div>
+    {% if antwoorden %}
+        <div style="max-width:600px;margin:30px auto 0 auto;">
+            <h3>Antwoord:</h3>
+            <ul>
+            {% for antwoord in antwoorden %}
+                <li>{{ antwoord }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html>

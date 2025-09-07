@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Docentenpagina Wiskunde Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .theorie-box {background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 12px rgba(76,175,80,0.08);max-width:700px;margin:30px auto;}
+        textarea {width:100%;height:220px;padding:12px;border-radius:8px;border:1px solid #b2dfdb;font-size:1em;}
+        .btns {display:flex;gap:12px;margin-top:16px;}
+        .btns button {padding:10px 18px;border:none;border-radius:8px;background:#4CAF50;color:#fff;font-weight:600;cursor:pointer;transition:background 0.2s;}
+        .btns button:hover {background:#388E3C;}
+        h2 {text-align:center;color:#388E3C;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/docent">Docent</a>
+    </nav>
+    <div class="theorie-box">
+        <h2>Theorie aanpassen</h2>
+        {% if foutmelding %}
+            <div style="color:red; margin-bottom:12px;">{{ foutmelding }}</div>
+        {% endif %}
+        <form method="post">
+            <label for="theorie">Hieronder kun je de theorie lezen en aanpassen:</label>
+            <textarea id="theorie" name="theorie">{% if theorie %}{{ theorie }}{% endif %}</textarea>
+            <label for="wachtwoord">Wachtwoord:</label>
+            <input type="password" id="wachtwoord" name="wachtwoord" required>
+            <div class="btns">
+                <button type="submit" name="actie" value="opslaan">Opslaan</button>
+                <button type="submit" name="actie" value="verwijderen" onclick="return confirm('Weet je zeker dat je alles wilt verwijderen?');">Verwijderen</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
