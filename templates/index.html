@@ -30,4 +30,23 @@
         </div>
     {% endif %}
 </body>
+
+
+<script>
+    function getCookie(name) {
+        let value = "; " + document.cookie;
+        let parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    let klas = getCookie("klas");
+    if (!klas) {
+        klas = prompt("Welke klas?");
+        if (klas) {
+            document.cookie = "klas=" + klas + "; path=/";
+            alert("Je klas is nu ingesteld op " + klas);
+        }
+    }
+    console.log("Huidige klas:", document.cookie);
+        
+</script>
 </html>

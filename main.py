@@ -33,6 +33,8 @@ app = Flask(__name__)
 def index():
     antwoorden = []
     if request.method == "POST":
+        klas = request.cookies.get('klas')
+        print(klas)
         vraag = request.form.get("vraag", "")
         antwoorden = zoek_antwoord(vraag, "wiskunde.txt")
     return render_template("index.html", antwoorden=antwoorden)
