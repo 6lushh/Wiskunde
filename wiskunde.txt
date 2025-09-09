@@ -1,6 +1,0 @@
-Sinus: In een rechthoekige driehoek is de sinus van een hoek gelijk aan de lengte van de overstaande zijde gedeeld door de lengte van de schuine zijde.
-Cosinus: In een rechthoekige driehoek is de cosinus van een hoek gelijk aan de lengte van de aanliggende zijde gedeeld door de lengte van de schuine zijde.
-Tangens: In een rechthoekige driehoek is de tangens van een hoek gelijk aan de lengte van de overstaande zijde gedeeld door de lengte van de aanliggende zijde.
-SOS: Sinus = Overstaande zijde / Schuine zijde.
-COS: Cosinus = Aanliggende zijde / Schuine zijde.
-TOA: Tangens = Overstaande zijde / Aanliggende zijde
