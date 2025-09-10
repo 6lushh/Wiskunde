@@ -1,0 +1,94 @@
+# Wiskunde Chatbot
+
+Welkom bij de Wiskunde Chatbot! Dit project biedt een eenvoudige webapplicatie waarmee leerlingen vragen over wiskunde kunnen stellen en docenten de theorie kunnen beheren per klas.
+
+## Inhoud
+
+- [Beschrijving](#beschrijving)
+- [Installatie](#installatie)
+- [Starten](#starten)
+- [Gebruik](#gebruik)
+- [Docenten Wiki](#docenten-wiki)
+- [Bestanden](#bestanden)
+- [Contact](#contact)
+
+---
+
+## Beschrijving
+
+De Wiskunde Chatbot is een Flask-applicatie die leerlingen helpt met wiskundevragen. Docenten kunnen via een beveiligde pagina de theorie aanpassen voor klas 1 t/m 4.
+
+## Installatie
+
+1. **Clone de repository:**
+   ```sh
+   git clone <repo-url>
+   cd Wiskunde
+   ```
+
+2. **Installeer de benodigde Python-pakketten:**
+   ```sh
+   pip install flask
+   ```
+
+3. **(Optioneel) Start in een devcontainer:**
+   - Dit project werkt direct in een VS Code devcontainer op Ubuntu 24.04.
+
+## Starten
+
+Start de server met:
+
+```sh
+python main.py
+```
+
+Open de webapp in je browser:
+
+```sh
+$BROWSER http://localhost:5000
+```
+
+## Gebruik
+
+### Voor leerlingen
+
+- **Stel een vraag:**  
+  Vul je vraag in op de homepage en klik op "Stel vraag".
+- **Klas instellen:**  
+  Bij het eerste gebruik wordt gevraagd om je klas (1 t/m 4). Dit wordt onthouden in een cookie.
+
+### Voor docenten
+
+- **Ga naar de Docentenpagina:**  
+  Klik op "Docent" in het menu.
+- **Selecteer een klas:**  
+  Kies de juiste klas om de theorie te bekijken of aan te passen.
+- **Wachtwoord:**  
+  Voer het wachtwoord in om wijzigingen op te slaan of te verwijderen.  
+  *(Standaard wachtwoord: `p.assen`)*
+
+## Docenten Wiki
+
+- **Theorie aanpassen:**  
+  Op elke klas-pagina kun je de theorie direct wijzigen in het tekstvak.
+- **Opslaan:**  
+  Klik op "Opslaan" om de nieuwe theorie te bewaren.
+- **Verwijderen:**  
+  Klik op "Verwijderen" om alle theorie voor die klas te wissen (bevestiging vereist).
+- **Bestanden:**  
+  De theorie wordt per klas opgeslagen in `wiskunde1.txt`, `wiskunde2.txt`, etc.
+
+## Bestanden
+
+- `main.py` — Hoofdapplicatie (Flask)
+- `templates/` — HTML-templates voor alle pagina's
+- `static/` — CSS en favicon
+- `wiskunde1.txt` t/m `wiskunde4.txt` — Theorie per klas
+
+## Contact
+
+Voor vragen of suggesties: open een issue op GitHub!
+
+---
+
+Veel succes en plezier met de
