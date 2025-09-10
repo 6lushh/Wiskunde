@@ -125,5 +125,9 @@ def wiskunde4():
 @app.route("/info")
 def infoindex():
     return render_template("info.html")
+
+@app.route("/docent")
+def docent():
+    return render_template("docent.html")
 if __name__ == "__main__":
     app.run(debug=True)

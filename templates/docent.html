@@ -21,19 +21,12 @@
     </nav>
     <div class="theorie-box">
         <h2>Theorie aanpassen</h2>
-        {% if foutmelding %}
-            <div style="color:red; margin-bottom:12px;">{{ foutmelding }}</div>
-        {% endif %}
-        <form method="post">
-            <label for="theorie">Hieronder kun je de theorie lezen en aanpassen:</label>
-            <textarea id="theorie" name="theorie">{% if theorie %}{{ theorie }}{% endif %}</textarea>
-            <label for="wachtwoord">Wachtwoord:</label>
-            <input type="password" id="wachtwoord" name="wachtwoord" required>
-            <div class="btns">
-                <button type="submit" name="actie" value="opslaan">Opslaan</button>
-                <button type="submit" name="actie" value="verwijderen" onclick="return confirm('Weet je zeker dat je alles wilt verwijderen?');">Verwijderen</button>
-            </div>
-        </form>
+        <div class="btns">
+            <button onclick="window.location.href='/wiskunde1'">Wiskunde klas 1</button>
+            <button onclick="window.location.href='/wiskunde2'">Wiskunde klas 2</button>
+            <button onclick="window.location.href='/wiskunde3'">Wiskunde klas 3</button>
+            <button onclick="window.location.href='/wiskunde4'">Wiskunde klas 4</button>
+        </div>
     </div>
 </body>
 </html>
