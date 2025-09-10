@@ -35,13 +35,13 @@ def index():
         klas = request.cookies.get('klas')
         print(klas)
         vraag = request.form.get("vraag", "")
-        if klas == 4:
+        if klas == "4":
             antwoorden = zoek_antwoord(vraag, "wiskunde4.txt")
-        elif klas == 3:
+        elif klas == "3":
             antwoorden = zoek_antwoord(vraag, "wiskunde3.txt")
-        elif klas == 2:
+        elif klas == "2":
             antwoorden = zoek_antwoord(vraag, "wiskunde2.txt")
-        elif klas == 1:
+        elif klas == "1":
             antwoorden = zoek_antwoord(vraag, "wiskunde1.txt")
     return render_template("index.html", antwoorden=antwoorden)
 
@@ -130,4 +130,4 @@ def infoindex():
 def docent():
     return render_template("docent.html")
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
